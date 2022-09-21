@@ -6,6 +6,7 @@
   "scripts": {
     "start:once": "ts-node -T local.ts",
     "singleton": "ts-node singleton/index.ts",
+    "prototype": "ts-node prototype/index.ts",
     "start:debug": "ts-node --files --transpile-only --project tsconfig.json local.ts"
   },
   "keywords": [
