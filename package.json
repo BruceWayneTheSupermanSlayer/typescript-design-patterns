@@ -10,6 +10,7 @@
     "builder": "ts-node builder/index.ts",
     "mordern:builder": "ts-node builder/mordern/mordern-builder.ts",
     "factory": "ts-node factory/index.ts",
+    "abstract-factory": "ts-node abstract-factory/index.ts",
     "start:debug": "ts-node --files --transpile-only --project tsconfig.json local.ts"
   },
   "keywords": [
