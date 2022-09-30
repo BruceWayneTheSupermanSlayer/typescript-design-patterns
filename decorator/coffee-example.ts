@@ -1,15 +1,11 @@
 abstract class Beverage {
-    cost(): number {
-        return 0;
-    }
+    public abstract cost(): number;
 
-    getDescription(): string {
-        return "Default impl";
-    }
-
+    public abstract getDescription(): string;
 }
 
-class Espresso extends Beverage {
+class Espresso
+    extends Beverage {
 
     override cost(): number {
         return 10.99;
