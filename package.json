@@ -12,6 +12,8 @@
     "factory": "ts-node factory/index.ts",
     "abstract-factory": "ts-node abstract-factory/index.ts",
     "adapter": "ts-node adapter/index.ts",
+    "decorator": "ts-node decorator/coffee-example.ts",
+    "decorator:mordern": "ts-node decorator/mordern-variant.ts",
     "start:debug": "ts-node --files --transpile-only --project tsconfig.json local.ts"
   },
   "keywords": [

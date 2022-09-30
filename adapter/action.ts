@@ -7,7 +7,7 @@ export class Action implements IActionCreator {
     }
 
     createAction(name: string): Promise<void> {
-        return new Promise<void>((resolve, reject) => {
+        return new Promise<void>((resolve, _) => {
             this.customActionCreator.createCustomAction(name);
             resolve();
         })
