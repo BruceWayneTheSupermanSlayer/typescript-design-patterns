@@ -29,4 +29,4 @@ class Facade {
     }
 }
 
-new Facade(new ServiceAImpl(),new ServiceBImpl()).perform()
+new Facade(new ServiceAImpl(), new ServiceBImpl()).perform()

@@ -15,6 +15,7 @@
     "decorator": "ts-node decorator/coffee-example.ts",
     "decorator:mordern": "ts-node decorator/mordern-variant.ts",
     "facade": "ts-node facade/index.ts",
+    "proxy": "ts-node proxy/index.ts",
     "start:debug": "ts-node --files --transpile-only --project tsconfig.json local.ts"
   },
   "keywords": [
