@@ -1,10 +1,5 @@
-import {
-    EmailMessageService,
-    LongMessage,
-    PostalDelivery,
-    ShortMessageService,
-    SMSService
-} from "./notification";
+import {EmailMessageService, LongMessage, PostalDelivery, ShortMessageService, SMSService} from "./notification";
+import {DatabaseStorage, FileStorage, Student, StudentRepository} from "./multi-storeage-system";
 
 const smsService = new SMSService();
 const emailService = new EmailMessageService();
@@ -47,3 +42,33 @@ SAMPLE_MESSAGES.forEach(message => {
     shortMessageViaPostal.sendMessage(message);
     longMessageViaPostal.sendMessage(message);
 })
+
+
+console.log(`\n`);
+console.log(`🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨`);
+console.log(`implementing student storage system`);
+console.log(`\n`);
+
+/*
+* Student storage, student can be either stored in database or they can stored in a file
+* */
+
+
+const fileBasedStorage = new FileStorage();
+const databaseStorage = new DatabaseStorage();
+const saveStudentInFile = new StudentRepository(fileBasedStorage);
+const saveStudentInDatabase = new StudentRepository(databaseStorage);
+
+const SAMPLE_STUDENTS = [{name: 'student_1', id: 1}, {name: 'student_2', id: 2}, {
+    name: 'student_3',
+    id: 3
+}, {name: 'student_4', id: 4}]
+
+
+SAMPLE_STUDENTS.forEach(student => {
+    const {id, name} = student;
+    saveStudentInDatabase.save({id, name} as Student);
+    saveStudentInFile.save({id, name} as Student)
+})
+
+
