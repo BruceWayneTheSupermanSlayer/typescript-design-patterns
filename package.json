@@ -19,6 +19,7 @@
     "proxy:mordern": "ts-node proxy/mordern-variant.ts",
     "bridge:notification": "ts-node bridge/index.ts",
     "flyweight": "ts-node flyweight/index.ts",
+    "strategy:duck": "ts-node strategy/index.ts",
     "start:debug": "ts-node --files --transpile-only --project tsconfig.json local.ts"
   },
   "keywords": [
