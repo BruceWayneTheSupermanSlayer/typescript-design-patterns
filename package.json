@@ -21,6 +21,8 @@
     "flyweight": "ts-node flyweight/index.ts",
     "strategy:duck": "ts-node strategy/ducks/index.ts",
     "strategy:navigation": "ts-node strategy/navigation/index.ts",
+    "chain_of_responsibility": "ts-node chain-of-responsibility/index.ts",
+    "observer:generic": "ts-node observer/generic/index.ts",
     "start:debug": "ts-node --files --transpile-only --project tsconfig.json local.ts"
   },
   "keywords": [
